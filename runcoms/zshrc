@@ -10,8 +10,12 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-
 # Customize to your needs...
+
+if [[ -s "$HOME/.dotfiles/aliases.sh" ]]; then
+  source "$HOME/.dotfiles/aliases.sh"
+fi
+
 if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
   source ~/.nvm/nvm.sh
 fi
@@ -19,5 +23,8 @@ fi
 if [[ -s "$HOME/go/current" ]]; then
   export GOROOT="$HOME/go"
   export PATH="$PATH:$GOROOT/bin"
+fi
+if [[ -s "$HOME/Projects/go" ]]; then
+  export $GOPATH="$HOME/Projects/go"
 fi
 
