@@ -32,9 +32,11 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'prompt' \
   'git' \
-  'node'
+  'node'\
+  'history-substring-search' \
+  'valotas' \
+  'prompt' 
 
 #
 # Editor
