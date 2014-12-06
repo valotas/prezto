@@ -1,4 +1,4 @@
-source "aliases.sh"
+source "$HOME/.zprezto/modules/valotas/aliases.sh"
 
 if [[ -s "$HOME/go/current" ]]; then
   export GOROOT="$HOME/go"
