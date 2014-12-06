@@ -1,6 +1,4 @@
-if [[ -s "$HOME/.dotfiles/aliases.sh" ]]; then
-  source "$HOME/.dotfiles/aliases.sh"
-fi
+source "aliases.sh"
 
 if [[ -s "$HOME/go/current" ]]; then
   export GOROOT="$HOME/go"
