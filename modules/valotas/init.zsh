@@ -20,6 +20,11 @@ if [[ -s "$HOME/usr/maven/current" ]]; then
   PATH="$M2:$PATH"
 fi
 
+if [[ -s "$HOME/usr/gradle/current" ]]; then
+  export GRADLE_HOME="$HOME/usr/gradle/current";
+  PATH="$GRADLE_HOME/bin:$PATH"
+fi
+
 if [[ -d "$HOME/local/usr/dart/dart-sdk/bin" ]]; then
   PATH="$HOME/local/usr/dart/dart-sdk/bin:$PATH"
 fi
