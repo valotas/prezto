@@ -29,5 +29,9 @@ if [[ -d "$HOME/local/usr/dart/dart-sdk/bin" ]]; then
   PATH="$HOME/local/usr/dart/dart-sdk/bin:$PATH"
 fi
 
+if [[ -d "$HOME/usr/android-sdk-linux/platform-tools" ]]; then
+  PATH="$HOME/usr/android-sdk-linux/platform-tools:$PATH"
+fi
+
 export PATH
 export CHROME_BIN=`which chromium-browser`
