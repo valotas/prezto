@@ -25,6 +25,10 @@ if [[ -s "$HOME/usr/gradle/current" ]]; then
   PATH="$GRADLE_HOME/bin:$PATH"
 fi
 
+if [[ -d "$HOME/local/bin" ]]; then
+  PATH="$HOME/local/bin:$PATH"
+fi
+
 if [[ -d "$HOME/local/usr/dart/dart-sdk/bin" ]]; then
   PATH="$HOME/local/usr/dart/dart-sdk/bin:$PATH"
 fi
