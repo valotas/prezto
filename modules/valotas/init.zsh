@@ -9,7 +9,6 @@ if [[ -s "$HOME/Projects/go" ]]; then
   export GOPATH="$HOME/Projects/go"
 fi
 
-
 if [[ -d "$JAVA_HOME/bin" ]]; then
   PATH="$JAVA_HOME/bin:$PATH"
 fi
@@ -37,5 +36,11 @@ if [[ -d "$HOME/usr/android-sdk-linux/platform-tools" ]]; then
   PATH="$HOME/usr/android-sdk-linux/platform-tools:$PATH"
 fi
 
+# Adapted n-install (see http://git.io/n-install-repo).
+if [[ -d "$HOME/n" ]]; then
+  export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  
+fi
+
 export PATH
 export CHROME_BIN=`which chromium-browser`
+
