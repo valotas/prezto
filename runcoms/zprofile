@@ -67,8 +67,8 @@ fi
 #
 
 if [[ ! -d "$TMPDIR" ]]; then
-  export TMPDIR="/tmp/$LOGNAME"
-  mkdir -p -m 700 "$TMPDIR"
+  export TMPDIR="/tmp"
+  mkdir -p -m 700 "$TMPDIR/$LOGNAME"
 fi
 
-TMPPREFIX="${TMPDIR%/}/zsh"
+TMPPREFIX="${TMPDIR%/}/${LOGNAME%/}/zsh"
