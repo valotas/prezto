@@ -24,7 +24,8 @@ if ([[ "$TERM_PROGRAM" = 'iTerm.app' ]] && \
 fi
 
 if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" ]] && \
-  [[ "$TERM_PROGRAM" != 'vscode' ]] && ( \
+  [[ "$TERM_PROGRAM" != 'vscode' ]] && \
+  [[ "$TMUX_ENABLED" != 'no' ]] && ( \
   ( [[ -n "$SSH_TTY" ]] && zstyle -t ':prezto:module:tmux:auto-start' remote ) ||
   ( [[ -z "$SSH_TTY" ]] && zstyle -t ':prezto:module:tmux:auto-start' local ) \
 ); then
