@@ -24,12 +24,14 @@ if [[ -s "$HOME/usr/gradle/current" ]]; then
   PATH="$GRADLE_HOME/bin:$PATH"
 fi
 
-if [[ -d "$HOME/local/bin" ]]; then
-  PATH="$HOME/local/bin:$PATH"
+ANDROID_HOME="$HOME/Android/Sdk"
+if [[ -d "$ANDROID_TOOLS/tools/bin" ]]; then
+  PATH="$ANDROID_TOOLS/tools/bin:$PATH"
+  export ANDROID_HOME
 fi
 
-if [[ -d "$HOME/usr/android-sdk-linux/platform-tools" ]]; then
-  PATH="$HOME/usr/android-sdk-linux/platform-tools:$PATH"
+if [[ -d "$HOME/local/bin" ]]; then
+  PATH="$HOME/local/bin:$PATH"
 fi
 
 # Adapted n-install (see http://git.io/n-install-repo).
@@ -45,11 +47,14 @@ if [[ -f "$HOME/.dvm/scripts/dvm" ]]; then
   if [[ -d "$HOME/.pub-cache/bin" ]]; then
     export PUB_CACHE="$HOME/.pub-cache"; [[ :$PATH: == *":$PUB_CACHE/bin:"* ]] || PATH+=":$PUB_CACHE/bin"
   fi
-
-  if [[ -d "$HOME/local/flutter/bin" ]]; then
-    PATH="$HOME/local/flutter/bin:$PATH"
-  fi
 fi
+
+FLUTTER_HOME="$HOME/local/flutter"
+if [[ -d "$FLUTTER_HOME/bin" ]]; then
+  PATH="$FLUTTER/bin:$PATH"
+  export FLUTTER_HOME
+fi
+
 
 export PATH
 export CHROME_BIN=`which chromium-browser`
