@@ -51,7 +51,7 @@ fi
 
 FLUTTER_HOME="$HOME/local/flutter"
 if [[ -d "$FLUTTER_HOME/bin" ]]; then
-  PATH="$FLUTTER/bin:$PATH"
+  PATH="$FLUTTER_HOME/bin:$PATH"
   export FLUTTER_HOME
 fi
 
