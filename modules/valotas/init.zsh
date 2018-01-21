@@ -1,4 +1,5 @@
-source "$HOME/.zprezto/modules/valotas/aliases.sh"
+source "${0:h}/aliases.sh"
+source "${0:h}/google-cloud-sdk.zsh"
 
 if [[ -s "$HOME/go/current" ]]; then
   export GOROOT="$HOME/go"
