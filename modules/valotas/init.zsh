@@ -19,7 +19,7 @@ if [[ -d "$HOME/n" ]]; then
   export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 fi
 
-export CHROME_BIN=`which chromium-browser`
+export CHROME_BIN=`which google-chrome`
 
 if [[ -f "$HOME/.config/lokali-c9daeea883e6.json" ]]; then
   export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.config/lokali-c9daeea883e6.json"
