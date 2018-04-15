@@ -65,7 +65,8 @@ To pull the latest changes and update submodules manually:
 
 ```console
 cd $ZPREZTODIR
-git pull
+git fetch upstream
+git merge upstream/master
 git submodule update --init --recursive
 ```
 
