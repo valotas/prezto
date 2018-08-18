@@ -4,6 +4,8 @@ source "${0:h}/go.zsh"
 source "${0:h}/java.zsh"
 source "${0:h}/dart.zsh"
 
+export SYSTEMD_EDITOR=vim
+
 ANDROID_HOME="$HOME/Android/Sdk"
 if [[ -d "$ANDROID_TOOLS/tools/bin" ]]; then
   export PATH="$ANDROID_TOOLS/tools/bin:$PATH"
