@@ -11,3 +11,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/valotas/.sdkman"
+[[ -s "/home/valotas/.sdkman/bin/sdkman-init.sh" ]] && source "/home/valotas/.sdkman/bin/sdkman-init.sh"
