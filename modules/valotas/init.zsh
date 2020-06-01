@@ -2,6 +2,7 @@ source "${0:h}/aliases.sh"
 source "${0:h}/google-cloud-sdk.zsh"
 source "${0:h}/go.zsh"
 source "${0:h}/dart.zsh"
+source "${0:h}/sdkman.zsh"
 
 export SYSTEMD_EDITOR=vim
 
