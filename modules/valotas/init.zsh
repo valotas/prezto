@@ -12,9 +12,11 @@ if [[ -d "$ANDROID_TOOLS/tools/bin" ]]; then
   export ANDROID_HOME
 fi
 
-if [[ -d "$HOME/local/bin" ]]; then
-  export PATH="$HOME/local/bin:$PATH"
-fi
+for bin in "$HOME/local/bin" "$HOME/.local/bin"; do
+  if [[ -d "$bin" ]]; then
+    export PATH="$bin:$PATH"
+  fi
+done
 
 # Adapted n-install (see http://git.io/n-install-repo).
 if [[ -d "$HOME/n" ]]; then
@@ -25,8 +27,4 @@ export CHROME_BIN=`which google-chrome`
 
 if [[ -f "$HOME/.config/lokali-c9daeea883e6.json" ]]; then
   export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.config/lokali-c9daeea883e6.json"
-fi
-
-if [[ -d "$HOME/.local/bin" ]]; then
-  export PATH="$HOME/.local/bin:$PATH"
 fi
