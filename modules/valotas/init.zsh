@@ -1,16 +1,9 @@
 source "${0:h}/aliases.sh"
 source "${0:h}/google-cloud-sdk.zsh"
 source "${0:h}/go.zsh"
-source "${0:h}/dart.zsh"
 source "${0:h}/sdkman.zsh"
 
 export SYSTEMD_EDITOR=vim
-
-ANDROID_HOME="$HOME/Android/Sdk"
-if [[ -d "$ANDROID_TOOLS/tools/bin" ]]; then
-  export PATH="$ANDROID_TOOLS/tools/bin:$PATH"
-  export ANDROID_HOME
-fi
 
 for bin in "$HOME/local/bin" "$HOME/.local/bin"; do
   if [[ -d "$bin" ]]; then
