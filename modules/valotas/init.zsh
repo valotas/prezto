@@ -21,3 +21,6 @@ export CHROME_BIN=`which google-chrome`
 if [[ -f "$HOME/.config/lokali-c9daeea883e6.json" ]]; then
   export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.config/lokali-c9daeea883e6.json"
 fi
+
+export FOOTBALL_DATA_TOKEN=5ecd3132cf3b4299b70e7229192a49bd
+export FOOTBALL_DATA_USER=valotas@gmail.com
