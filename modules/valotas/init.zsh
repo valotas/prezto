@@ -21,4 +21,3 @@ if [[ -f "$HOME/.config/lokali-c9daeea883e6.json" ]]; then
   export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.config/lokali-c9daeea883e6.json"
 fi
 
-[[ -s "$HOME/dotfiles/profile.sh" ]] && source "$HOME/dotfiles/profile.sh"
