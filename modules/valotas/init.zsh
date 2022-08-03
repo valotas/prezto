@@ -21,3 +21,7 @@ if [[ -f "$HOME/.config/lokali-c9daeea883e6.json" ]]; then
   export GOOGLE_APPLICATION_CREDENTIALS="$HOME/.config/lokali-c9daeea883e6.json"
 fi
 
+if [[ -f "$HOME/.fly/bin/flyctl" ]]; then
+  export FLYCTL_INSTALL="$HOME/.fly"
+  export PATH="$FLYCTL_INSTALL/bin:$PATH"
+fi
