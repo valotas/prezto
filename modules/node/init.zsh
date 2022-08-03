@@ -9,6 +9,7 @@
 # Load manually installed NVM into the shell session.
 if [[ -s "${NVM_DIR:=$HOME/.nvm}/nvm.sh" ]]; then
   source "${NVM_DIR}/nvm.sh"
+  source "${NVM_DIR}/bash_completion"
 
 # Load package manager installed NVM into the shell session.
 elif (( $+commands[brew] )) && \
