@@ -1,19 +1,13 @@
 source "${0:h}/aliases.sh"
 source "${0:h}/google-cloud-sdk.zsh"
 source "${0:h}/go.zsh"
-
-export SYSTEMD_EDITOR=vim
+source "${0:h}/editor.zsh"
 
 for bin in "$HOME/local/bin" "$HOME/.local/bin"; do
   if [[ -d "$bin" ]]; then
-    export PATH="$bin:$PATH"
+    export -U PATH=$bin${PATH:+:$PATH}
   fi
 done
-
-# Adapted n-install (see http://git.io/n-install-repo).
-if [[ -d "$HOME/n" ]]; then
-  export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
-fi
 
 export CHROME_BIN=`which google-chrome`
 
@@ -23,5 +17,5 @@ fi
 
 if [[ -f "$HOME/.fly/bin/flyctl" ]]; then
   export FLYCTL_INSTALL="$HOME/.fly"
-  export PATH="$FLYCTL_INSTALL/bin:$PATH"
+  export -U PATH=$FLYCTL_INSTALL/bin${PATH:+:$PATH}
 fi
