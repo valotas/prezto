@@ -23,13 +23,12 @@ if (( $#local_nodenv_paths || $+commands[nodenv] )); then
 
 # Load manually installed nvm into the shell session.
 elif (( $#local_nvm_paths )); then
-  source "$local_nvm_paths[1]" --no-use
+  source "$local_nvm_paths[1]"
 
 # Load package manager installed nvm into the shell session.
 elif (( $+commands[brew] )) \
       && [[ -d "${nvm_path::="$(brew --prefix 2> /dev/null)"/opt/nvm}" ]]; then
   source "$nvm_path/nvm.sh" --no-use
-  source "$nvm_path/bash_completion"
 fi
 
 unset local_n{odenv,vm}_paths nvm_path
