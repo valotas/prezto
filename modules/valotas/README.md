@@ -1,4 +1,0 @@
-valotas
-=======
-
-Personilization stuff
